@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>London's Road Bike Reviews</title>
+<link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+</head>
+<body>
+<header>
+<h1>London's Road Bike Reviews</h1>
+</header>
+<div class="layout__body">
+<div class="main">
+
+<img th:src="${onereview.imageUrl}"/>
+
+<p th:text="'Year: ' + ${onereview.Year}"></p>
+<p th:text="'make: ' + ${onereview.make}"></p>
+<p th:text="'model: ' + ${onereview.model}"></p>
+<p th:text="'imageUrl: ' + ${onereview.imageUrl}"></p>
+<p th:text="'frame: ' + ${onereview.frame}"></p>
+<p th:text="'review: ' + ${onereview.review}"></p>
+
+
+
+</div>
+<nav class="layout__nav layout__columns">
+    <p> left column</p>
+    </nav>
+    <div class="layout__aside layout__columns">
+    <p>right column</p>
+    </div>
+  </div>
+ 
+ <footer>
+    
+ </footer>
+
+</body>
+</html>

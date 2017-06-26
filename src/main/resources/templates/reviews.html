@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>London's Road Bike Reviews</title>
+<link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+<body>
+	<header>
+		<h1>London's Road Bike Reviews</h1>
+	</header>
+	<p th:text="${reviewsAsCollection}" />
+	<div class="layout__body">
+		<div class="main">
+
+			<a th:each="review: ${reviewsAsCollection}"
+				th:href="@{/onereview/(year=${review.title})}"><div
+					th:text="${review.title}"></div></a>
+
+		</div>
+		<nav class="layout__nav layout__columns">
+			<p>left column</p>
+		</nav>
+		<div class="layout__aside layout__columns">
+			<p>right column</p>
+		</div>
+	</div>
+
+	<footer> </footer>
+
+</body>
+</html>
